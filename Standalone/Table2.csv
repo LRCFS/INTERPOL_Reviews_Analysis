@@ -1,0 +1,14 @@
+EvidenceType,IFSMS,IFSMSandScopus,ScopusSearch,ScopusCount,IFSMSCount
+Forensic Geosciences,708,431,forensic  AND  ( soil  OR  geology  OR  geoscience ),1691,240
+Toolmarks,1066,750,forensic  AND  marks  AND NOT  medicine ,1421,116
+Paint and Glass,1292,855,( paint  OR  glass )  AND  forensic ,1745,223
+Fire Investigation,970,682,fire  AND  investigation ,10078,146
+Explosives Analysis,3205,2799,explosives  AND  analysis ,25407,1129
+Explosives Scene,2355,1990,explosives  AND  scene ,477,22
+Toxicology Challenge - Advances,2014,1886,toxicology  AND ( challenge  OR  Advances )  ,4417,42
+Toxicology Surveillance,1162,1076,toxicology  AND  surveillance ,814,1
+Digital evidence,479,281,forensic  AND  digital  AND  evidence ,2819,47
+Fingermarks Composition,603,537,fingerprint  AND composition ,5347,44
+Fingermarks Detection,2126,1840,( fingerprint  AND  ( detection  OR  imaging ) ,11308,434
+Biological Evidence - DNA,868,823,forensic  AND (dna  OR  biology) ,15352,571
+Questioned Documents,1237,768,questioned  AND document ,1397,201
