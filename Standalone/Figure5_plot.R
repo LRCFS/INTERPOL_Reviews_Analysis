@@ -98,6 +98,6 @@ plt2 = ggplot(scopus.l, aes(x = EvidenceType, y = counts, fill = rev(source))) +
 
 ggarrange(plt1, plt2, common.legend = T, widths = c(1.5,1), legend = 'bottom')
 
-ggsave("Results/Figure5.png", width = unit(8, 'in'), height = unit(5.5, 'in'))
+ggsave("Results/Figure5.tiff", width = unit(7.27, 'in'), height = unit(5, 'in'), dpi=300)
 
 print("Processing complete. Please check 'Results' folder for output")
