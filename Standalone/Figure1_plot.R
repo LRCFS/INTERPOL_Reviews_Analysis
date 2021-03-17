@@ -45,7 +45,7 @@ library(RColorBrewer)
 library(dplyr)
 library(tidyr)
 
-dat = read.csv('Standalone/Table1.csv')
+dat = read.csv('Table1.csv')
 
 dat$colour <- as.character(dat$colour)
 names(dat)[1] <- c("Evidence")
@@ -61,4 +61,6 @@ p <- ggplot(dat, aes(x=Report, fill=colour)) +
 
 show(p)
 
-ggsave("Standalone/Results//Figure1.png", width = unit(6.5, 'in'), height = unit(8, 'in'))
+ggsave("Results//Figure1.png", width = unit(6.5, 'in'), height = unit(8, 'in'))
+
+print("Processing complete. Please check 'Results' folder for output")

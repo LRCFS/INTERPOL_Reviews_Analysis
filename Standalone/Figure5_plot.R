@@ -46,7 +46,7 @@ library(dplyr)
 library(tidyr)
 library(reshape2)
 
-dat = read.delim('Standalone/Table2.csv', sep = ",")
+dat = read.delim('Table2.csv', sep = ",")
 ifsms.dat = dat[,1:3]
 scopus.dat = dat[,c(1,5:6)]
 
@@ -98,5 +98,6 @@ plt2 = ggplot(scopus.l, aes(x = EvidenceType, y = counts, fill = rev(source))) +
 
 ggarrange(plt1, plt2, common.legend = T, widths = c(1.5,1), legend = 'bottom')
 
-ggsave("Standalone/Results/Figure5.png", width = unit(8, 'in'), height = unit(5.5, 'in'))
+ggsave("Results/Figure5.png", width = unit(8, 'in'), height = unit(5.5, 'in'))
 
+print("Processing complete. Please check 'Results' folder for output")

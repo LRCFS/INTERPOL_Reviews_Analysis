@@ -72,7 +72,7 @@ library(jaccard)
 #####                      Function                     #####
 #############################################################
 
-source("Standalone/Functions/SearchAndReplace.R")
+source("Functions/SearchAndReplace.R")
 
 #############################################################
 #####                      Function                     #####
@@ -101,10 +101,10 @@ removeDiacritics <- function(string) {
 
 # set extension and Citation
 extension <- ".csv"
-cit.path.INTERPOL <- "Standalone/INTERPOL/"
+cit.path.INTERPOL <- "INTERPOL/"
  
 # where the generated figures are saved, create folder if not existing
-Results.dir <- "Standalone/Results/"
+Results.dir <- "Results/"
 dir.create(file.path(Results.dir))
 Figure.dir <- "Figures/"
 # dir.create(file.path(Figure.dir))
@@ -179,7 +179,7 @@ dat_csvReduced <- dat_csvReduced %>%
 #############################################################
 
 #read the corrected list for Title
-TitleCorrected <- read.csv("Standalone/CorrectionLists/TitleCorrections.csv", header=TRUE, encoding = 'UTF-8')
+TitleCorrected <- read.csv("CorrectionLists/TitleCorrections.csv", header=TRUE, encoding = 'UTF-8')
 
 dat_csvReduced$TitleCorrected <- gsr(as.character(dat_csvReduced$Title),as.character(TitleCorrected$Original),as.character(TitleCorrected$Corrected))
 
@@ -297,3 +297,5 @@ corrplot(result, method="color",
          cl.lim = c(0,1)
 )
 dev.off()
+
+print("Processing complete. Please check 'Results' folder for output")

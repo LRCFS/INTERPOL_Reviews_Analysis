@@ -61,7 +61,7 @@ library(readr)
 #####                      Function                     #####
 #############################################################
 
-source("Standalone/Functions/SearchAndReplace.R")
+source("Functions/SearchAndReplace.R")
 
 #############################################################
 #####                      Function                     #####
@@ -83,10 +83,10 @@ removeDiacritics <- function(string) {
 
 # set extension and Citation
 extension <- ".csv"
-cit.path.INTERPOL <- "Standalone/INTERPOL/"
+cit.path.INTERPOL <- "INTERPOL/"
 
 # where the generated figures are saved, create folder if not existing
-Results.dir <- "Standalone/Results/"
+Results.dir <- "Results/"
 dir.create(file.path(Results.dir),recursive = TRUE)
 Figure.dir <- "Figures/"
 # dir.create(file.path(Figure.dir),recursive = TRUE)
@@ -160,7 +160,7 @@ KeywordEntries <- "Author.Keywords"
 # ####### Select ######
 # ####                    Data INTERPOL                  #####
 # 
-cit.path.INTERPOL <- "Standalone/INTERPOL/"
+cit.path.INTERPOL <- "INTERPOL/"
 filenames <- list.files(cit.path.INTERPOL, pattern=extension, full.names=TRUE)
 # # # filename for figure export
 # TableName <- "Table_Keyword_INTERPOL_"
@@ -233,7 +233,7 @@ Dataset$Title <- trimws(Dataset$Title)
 #############################################################
 
 #read the corrected list for Title
-TitleCorrected <- read.csv("Standalone/CorrectionLists/TitleCorrections.csv", header=TRUE, encoding = 'UTF-8')
+TitleCorrected <- read.csv("CorrectionLists/TitleCorrections.csv", header=TRUE, encoding = 'UTF-8')
 
 Dataset$TitleCorrected <- gsr(as.character(Dataset$Title),as.character(TitleCorrected$Original),as.character(TitleCorrected$Corrected))
 
@@ -311,7 +311,7 @@ Dataset <- Dataset %>%
   
   #Correction to the keywords can be applied at this stage. This can be done in Notepad++, Excel etc. The ultimate order of the list must be kept so it can be binded to the orignial data.
   #read the corrected list of keywords and combine it to the original list
-  KeywordsCorrected <- read.csv("Standalone/CorrectionLists/KeywordsCorrectionFull.txt", sep="\t", header=TRUE)
+  KeywordsCorrected <- read.csv("CorrectionLists/KeywordsCorrectionFull.txt", sep="\t", header=TRUE)
   # KeywordsCorrected <- as.data.frame(KeywordsCorrected)
   # DatasetKeywordList$KeywordsCorrected <- gsr(as.character(DatasetKeywordList$AIKeywords),as.character(KeywordsCorrected$AIKeywords),as.character(KeywordsCorrected$CorrectedAIKeywords))
   DatasetKeywordList$KeywordsCorrected <- gsr(as.character(DatasetKeywordList$AIKeywords),as.character(KeywordsCorrected$AIKeywords),as.character(KeywordsCorrected$CorAIKeywordsAcronym))
@@ -577,4 +577,6 @@ ggsave(file=paste0(Results.dir,sprintf("%s.png",paste0(All,Keyname,EvidenceEntri
 
 
 show(p)
+
+print("Processing complete. Please check 'Results' folder for output")
 

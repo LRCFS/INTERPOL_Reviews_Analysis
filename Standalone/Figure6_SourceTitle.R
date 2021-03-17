@@ -62,7 +62,7 @@ library(ggthemes)
 #####                      Function                     #####
 #############################################################
 
-source("Standalone/Functions/SearchAndReplace.R")
+source("Functions/SearchAndReplace.R")
 
 
 #############################################################
@@ -85,11 +85,11 @@ removeDiacritics <- function(string) {
 
 # set extension and Citation
 extension <- ".csv"
-cit.path.INTERPOL <- "Standalone/INTERPOL/"
-cit.path.Scopus <- "Standalone/Scopus/"
+cit.path.INTERPOL <- "INTERPOL/"
+cit.path.Scopus <- "Scopus/"
 
 # where the generated figures are saved, create folder if not existing
-Results.dir <- "Standalone/Results/"
+Results.dir <- "Results/"
 dir.create(file.path(Results.dir),recursive = TRUE)
 Figure.dir <- "Figures/"
 # dir.create(file.path(Figure.dir),recursive = TRUE)
@@ -162,7 +162,7 @@ Dataset$Title <- trimws(Dataset$Title)
 #############################################################
 
 #read the corrected list for Title
-TitleCorrected <- read.csv("Standalone/CorrectionLists/TitleCorrections.csv", header=TRUE, encoding = 'UTF-8')
+TitleCorrected <- read.csv("CorrectionLists/TitleCorrections.csv", header=TRUE, encoding = 'UTF-8')
 
 Dataset$TitleCorrected <- gsr(as.character(Dataset$Title),as.character(TitleCorrected$Original),as.character(TitleCorrected$Corrected))
 
@@ -189,7 +189,7 @@ dat_csv_InterpolReduced <- dat_csv_Interpol2 %>%
 dat_csv_InterpolReduced$`Source title` <- toupper(dat_csv_InterpolReduced$`Source title`)
 
 #read the abbreviated list of title and combine it to the original list
-JournalCorrected <- read.csv("Standalone/CorrectionLists/TitleAbbreviation.csv", header=TRUE)
+JournalCorrected <- read.csv("CorrectionLists/TitleAbbreviation.csv", header=TRUE)
 
 dat_csv_InterpolReduced$AbbreviatedTitle <- gsr(as.character(dat_csv_InterpolReduced$`Source title`),as.character(JournalCorrected$JounalTitle),as.character(JournalCorrected$JounalAbbreviation))
 
@@ -314,6 +314,6 @@ var1 <- paste0(SourceTitle,OutputName,Scopus)
 #save figure
 ggsave(file=paste0(Results.dir,sprintf("%s.png",var1)), p, width = 6.5, height = 8, units = "in", dpi=150)
 
-
-
 show(p)
+
+print("Processing complete. Please check 'Results' folder for output")

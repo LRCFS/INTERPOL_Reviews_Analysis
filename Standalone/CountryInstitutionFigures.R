@@ -74,10 +74,10 @@ removeDiacritics <- function(string) {
 
 # set extension and Citation
 extension <- ".csv"
-cit.path.INTERPOL <- "Standalone/INTERPOL/"
+cit.path.INTERPOL <- "INTERPOL/"
 
 # where the generated figures are saved, create folder if not existing
-Results.dir <- "Standalone/Results/"
+Results.dir <- "Results/"
 dir.create(file.path(Results.dir),recursive = TRUE)
 Figure.dir <- "Figures/"
 # dir.create(file.path(Figure.dir),recursive = TRUE)
