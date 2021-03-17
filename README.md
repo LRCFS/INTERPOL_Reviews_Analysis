@@ -1,6 +1,6 @@
 # INTERPOL Reviews Analysis
 
-[![DOI](https://zenodo.org/badge/348326745.svg)](https://zenodo.org/badge/latestdoi/348326745)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4610543.svg)](https://doi.org/10.5281/zenodo.4610543)
 
 ## International Forensic Science Managers Symposium References Analysis Tool 
 
