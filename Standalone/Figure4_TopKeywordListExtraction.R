@@ -440,15 +440,15 @@ p <- ggplot(nba.m,aes(x=reorder(variable,desc(grapheorder2)),y=reorder(Keyword, 
   scale_fill_gradientn(colours = c("light grey", "blue"), values = c(0,1))+
   # guides(fill=guide_legend(title="Count"))+
   labs(x="",y="",title="")+
-  theme_grey(base_size=7.5)+
+  theme_grey(base_size=5)+
   theme(text = element_text(family = "Arial"),
         legend.position="none",legend.direction="vertical",
         legend.title=element_blank(),
         legend.margin=margin(grid::unit(0,"cm")),
-        legend.text=element_text(colour=textcol,size=7),
+        legend.text=element_text(colour=textcol,size=6),
         legend.key.height=grid::unit(0.8,"cm"),
         legend.key.width=grid::unit(0.2,"cm"),
-        axis.text.x=element_text(vjust=0.5,angle= 90,size=8,colour=textcol),
+        axis.text.x=element_text(vjust=0.5,angle= 90,size=5,colour=textcol),
         axis.text.y=element_text(vjust=0.2,colour=textcol),
         axis.ticks=element_line(size=0.4),
         plot.background=element_blank(),  # element_rect(fill, colour, size, linetype, color))
@@ -457,7 +457,7 @@ p <- ggplot(nba.m,aes(x=reorder(variable,desc(grapheorder2)),y=reorder(Keyword, 
         plot.title=element_text(colour=textcol,hjust=0,size=10))
 
 #save figure
-ggsave(file=paste0(Results.dir,sprintf("%s.png",paste0(Top,Keyname,EvidenceEntries))), p, width = 6, height = 8, units = "in", dpi=150)
+ggsave(file=paste0(Results.dir,sprintf("%s.tiff",paste0(Top,Keyname,EvidenceEntries))), p, width = 4.87, height = 6, units = "in", dpi=300)
 
 
 show(p)
@@ -556,16 +556,16 @@ p <- ggplot(nba.m,aes(x=reorder(variable,desc(grapheorder2)),y=reorder(Keyword, 
   scale_fill_gradientn(colours = c("light grey", "blue"), values = c(0,1))+
   # guides(fill=guide_legend(title="Count"))+
   labs(x="",y="",title="")+
-theme_grey(base_size=7.5)+
+theme_grey(base_size=5)+
   theme(text = element_text(family = "Arial"),
         legend.position="none",legend.direction="vertical",
         legend.title=element_blank(),
         legend.margin=margin(grid::unit(0,"cm")),
-        legend.text=element_text(colour=textcol,size=7),
+        legend.text=element_text(colour=textcol,size=6),
         legend.key.height=grid::unit(0.8,"cm"),
         legend.key.width=grid::unit(0.2,"cm"),
-        axis.text.x=element_text(vjust=0.5,angle= 90,size=8,colour=textcol),
-        axis.text.y=element_text(vjust=0.2,size=5,colour=TempColour),
+        axis.text.x=element_text(vjust=0.5,angle= 90,size=5,colour=textcol),
+        axis.text.y=element_text(vjust=0.2,size=4,colour=TempColour),
         axis.ticks=element_line(size=0.4),
         plot.background=element_blank(),  # element_rect(fill, colour, size, linetype, color))
         panel.border=element_blank(),
@@ -573,7 +573,7 @@ theme_grey(base_size=7.5)+
         plot.title=element_text(colour=textcol,hjust=0,size=10))
 
 #save figure
-ggsave(file=paste0(Results.dir,sprintf("%s.png",paste0(All,Keyname,EvidenceEntries))), p, width = 6, height = 8, units = "in", dpi=150)
+ggsave(file=paste0(Results.dir,sprintf("%s.tiff",paste0(All,Keyname,EvidenceEntries))), p, width = 4.87, height = 6, units = "in", dpi=300)
 
 
 show(p)

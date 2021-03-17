@@ -278,7 +278,7 @@ result <- as.matrix(result)
 CorVar <- paste0(JaccardExport,EvidenceEntries)
 
 # corrplot does not have an save funtionality as for example ggplot. Here are it is done instead:
-png(file.path(Results.dir,paste0(sprintf("%s.png",CorVar))), res=300, width = 6000, height = 4800, pointsize=27,
+tiff(file.path(Results.dir,paste0(sprintf("%s.tiff",CorVar))), res=300, width = 2000, height = 1600, pointsize=9,
     units = "px", type = "cairo")
 par(mar=c(1,1,1,520)+0.1)
 corrplot(result, method="color",

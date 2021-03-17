@@ -305,6 +305,8 @@ p <- ggplot(JournalList, aes(x = reorder(AbbreviatedTitle,desc(order)), y = numb
   # theme_tufte() +  # Tufte theme from ggfortify
   theme(plot.title = element_text(hjust = .5), 
         axis.ticks = element_blank(),
+        axis.text.x=element_text(size=7),
+        axis.text.y=element_text(size=6),
         axis.title.y = element_blank()) +  # Centre plot title
   scale_fill_brewer(palette = "Dark2") + # Color palette
    ylab("Number of documents")
@@ -312,7 +314,7 @@ p <- ggplot(JournalList, aes(x = reorder(AbbreviatedTitle,desc(order)), y = numb
 var1 <- paste0(SourceTitle,OutputName,Scopus)
 
 #save figure
-ggsave(file=paste0(Results.dir,sprintf("%s.png",var1)), p, width = 6.5, height = 8, units = "in", dpi=150)
+ggsave(file=paste0(Results.dir,sprintf("%s.tiff",var1)), p, width = 5, height = 6.15, units = "in", dpi=300)
 
 show(p)
 

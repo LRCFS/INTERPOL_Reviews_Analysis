@@ -326,15 +326,15 @@ p = ggplot(res.long, aes(col1, col2, fill = counts)) +
 show(p)
 
 ggsave(
-  sprintf("%s.png",var4),
+  sprintf("%s.tiff",var4),
   plot = p,
   device = NULL,
   path = file.path(Results.dir),
   scale = 1,
-  width = NA,
-  height = NA,
+  width = 7,
+  height = 5.0,
   units = c("in", "cm", "mm"),
-  dpi = 600,
+  dpi = 300,
   limitsize = TRUE
 )
 
