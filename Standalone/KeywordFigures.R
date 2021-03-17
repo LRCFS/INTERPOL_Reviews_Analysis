@@ -366,6 +366,8 @@ write.csv(DatasetKeywordNarrowRangeGraph, file=paste0(Results.dir,Keyword.dir,sp
 
 }
 
+print("Processing complete. Please check 'Results/INTERPOL-Keyword' folder for output")
+
 #### To merge all the evidence lists
 
 

@@ -301,3 +301,5 @@ ggsave(file=paste0(Results.dir,Affiliation.dir,sprintf("%s.png",var)), p, width 
 
 }
 
+print("Processing complete. Please check 'Results/Affiliation' folder for output")
+
