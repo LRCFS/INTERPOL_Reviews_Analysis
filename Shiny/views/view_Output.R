@@ -3,12 +3,8 @@
 
 view_Output = tabItem(tabName = "view_Output",
                       fluidRow(
-                        box(width=12,
-                        p("Document search using available keywords. The output list presented will contain records with any of the specified keywords, with documents having the most keyword matches appearing on top of the list.")
-                        )
-                      ),
-                      fluidRow(
                         box(title="Keyword Search", width=12,
+                            p("Document search using available keywords. The output list presented will contain records with any of the specified keywords, with documents having the most keyword matches appearing on top of the list."),
                             selectizeInput(
                               "Output_Keywords",
                               "Select Keyword(s)",
