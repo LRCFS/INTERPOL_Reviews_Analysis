@@ -1,5 +1,7 @@
 # INTERPOL Reviews Analysis
 
+[![DOI](https://zenodo.org/badge/348326745.svg)](https://zenodo.org/badge/latestdoi/348326745)
+
 ## International Forensic Science Managers Symposium References Analysis Tool 
 
 The use of forensic evidence has become indispensable in many countries and jurisdictions around the world, however the dissemination of research advancements does not necessarily directly or easily reach the forensic science community.
