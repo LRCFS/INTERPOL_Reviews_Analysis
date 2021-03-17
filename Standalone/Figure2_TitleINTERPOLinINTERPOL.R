@@ -288,8 +288,6 @@ row.names(result) <- OverallTable$Var1
 results <- as.data.frame(result)
 
 var4 <- paste0(OutputFigure,OutputName,OuputTitle)
-# create table as a figure
-png(file.path(Results.dir,paste0(sprintf("%s.png",var4))), width = 8.5, height = 6, units = "in", res = 600, bg = "white")
 
 # define upper triangle and set it to NA 
 # - this opposite to what we want, but I think 
@@ -309,7 +307,7 @@ res.long[res.long$col2 == 'Toxicology Challenge Advances','col2'] <- 'Toxicology
 
 # get vector of types for reordering the y-axis
 types.vec = row.names(results)
-ggplot(res.long, aes(col1, col2, fill = counts)) + 
+p = ggplot(res.long, aes(col1, col2, fill = counts)) + 
   geom_tile() + 
   # the darkest blue colour is too dark to see the black text
   # so make high value labels grey to be able to read them
@@ -325,6 +323,19 @@ ggplot(res.long, aes(col1, col2, fill = counts)) +
         panel.grid = element_blank(),
         panel.border = element_blank())
 
-dev.off()
+show(p)
+
+ggsave(
+  sprintf("%s.png",var4),
+  plot = p,
+  device = NULL,
+  path = file.path(Results.dir),
+  scale = 1,
+  width = NA,
+  height = NA,
+  units = c("in", "cm", "mm"),
+  dpi = 600,
+  limitsize = TRUE
+)
 
 print("Processing complete. Please check 'Results' folder for output")
