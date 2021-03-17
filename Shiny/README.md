@@ -10,7 +10,9 @@ The R-Shiny app provides an analysis of references lists available in the INTERP
 
 This code was developed using Rstudio 1.4.1106, R 4.0.4 and uses Renv for package management.
 
-To get started, open `Shiny.Rproj` in RStudio. This project file will install the Renv package if not already installed. Package dependancies can then be installed by using the following command: `renv::restore()`
+You can access a publicaly available version of this application online at: https://uod.ac.uk/lrcfsinterpolreportsexplorer
+
+Alternatively, to run from code, open `Shiny.Rproj` in RStudio. This project file will install the Renv package if not already installed. Package dependancies can then be installed by using the following command: `renv::restore()`
 
 Once installed, select the `app.R` file and then choose "Run app".
 

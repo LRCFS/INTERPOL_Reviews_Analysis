@@ -8,7 +8,7 @@ The R-Shiny app provides an analysis of references lists available in the INTERP
 
 ## Using the LRCFS Tool
 
-You can access a publicaly available version of this application at: https://lrcfs.dundee.ac.uk/apps/keyword-data-explorer/
+You can access a publicaly available version of this application online at: https://uod.ac.uk/lrcfsinterpolreportsexplorer
 
 The source code and the data used for the R-shiny application are available in the Shiny folder.
 
