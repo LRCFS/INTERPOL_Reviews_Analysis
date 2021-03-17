@@ -73,11 +73,12 @@ ui = dashboardPagePlus(title=paste0(APP_DEV_SHORT," - ",APP_NAME_SHORT," - v",AP
                        ),
                       
                        footer = dashboardFooter( #The footer should remain fairly static between all LRCFS shiny dashboard apps
-                         left_text = HTML(paste0("<div class='footerItem'><a href='",APP_LINK,"'>",APP_NAME," (v",APP_VER,") &copy;",format(Sys.time(), "%Y"),"</a></div>
-                                           <div class='footerItem'><a href='https://www.dundee.ac.uk/leverhulme/'>Developed by ", APP_DEV_SHORT, "</a></div>
-                                           <div class='footerItem'><a href='https://www.leverhulme.ac.uk/'>Funded by The Leverhulme Trust</a></div>")),
-                         right_text = HTML("<div class='footerLogo'><a href='https://www.dundee.ac.uk/leverhulme/'><img src='images/lrcfs-logo-colour.png'  alt='Visit LRCFS website' /></a></div>
-                                            <div class='footerLogo'><a href='https://www.leverhulme.ac.uk'><img src='images/lt-logo-colour.png' alt='Visit The Leverhulme Trust website' /></a></div>")
+                         left_text = HTML(paste0("<div class='footerItem'><a href='",APP_LINK,"' target='_blank'>",APP_NAME,"</a> (v",APP_VER,") &copy;",format(Sys.time(), "%Y"),"</div>
+										                      <div class='footerItem'>",APP_DOI_HTML,"</div>
+                                           <div class='footerItem'><a href='https://www.dundee.ac.uk/leverhulme/' target='_blank'>Developed by ", APP_DEV_SHORT, "</a></div>
+                                           <div class='footerItem'><a href='https://www.leverhulme.ac.uk/' target='_blank'>Funded by The Leverhulme Trust</a></div>")),
+                         right_text = HTML("<div class='footerLogo'><a href='https://www.dundee.ac.uk/leverhulme/' target='_blank'><img src='images/lrcfs-logo-colour.png'  alt='Visit LRCFS website' /></a></div>
+                                            <div class='footerLogo'><a href='https://www.leverhulme.ac.uk' target='_blank'><img src='images/lt-logo-colour.png' alt='Visit The Leverhulme Trust website' /></a></div>")
                        )
 )
 
