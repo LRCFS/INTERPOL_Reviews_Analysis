@@ -53,11 +53,14 @@ names(dat)[1] <- c("Evidence")
 p <- ggplot(dat, aes(x=Report, fill=colour)) +
   geom_bar(aes(weight = References))  + 
   scale_fill_manual("legend", values = c("0" = "grey", "1" = "blue")) +
-  ylab("Number of references") + theme(axis.title.x = element_blank(),
+  ylab("Number of references") + theme(axis.title.x = element_blank(), axis.title.y = element_text(size = 8),
                                        legend.position = "none") +
   facet_wrap(~Evidence, ncol = 4, scales = "free_y") +
-  theme(axis.text.x = element_text(angle = 60, vjust = 1, hjust=1, size = 8),
-        strip.text = element_text(size = 8))
+  theme(axis.text.x = element_text(angle = 60, vjust = 1, hjust=1, size = 6),
+        axis.text.y = element_text(size = 6),
+        strip.text = element_text(size = 6)) + 
+  labs(caption = "** includes references from the 11 IFSS, 12 IFSS and 13 IFSS reports (not shown)", ) +
+  theme(plot.caption = element_text(size = 6))
 
 show(p)
 
