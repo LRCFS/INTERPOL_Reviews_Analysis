@@ -311,7 +311,7 @@ Dataset <- Dataset %>%
   
   #Correction to the keywords can be applied at this stage. This can be done in Notepad++, Excel etc. The ultimate order of the list must be kept so it can be binded to the orignial data.
   #read the corrected list of keywords and combine it to the original list
-  KeywordsCorrected <- read.csv("CorrectionLists/KeywordsCorrectionFull.txt", sep="\t", header=TRUE)
+  KeywordsCorrected <- read.csv("CorrectionLists/KeywordsCorrectionFull.csv", header=TRUE)
   # KeywordsCorrected <- as.data.frame(KeywordsCorrected)
   # DatasetKeywordList$KeywordsCorrected <- gsr(as.character(DatasetKeywordList$AIKeywords),as.character(KeywordsCorrected$AIKeywords),as.character(KeywordsCorrected$CorrectedAIKeywords))
   DatasetKeywordList$KeywordsCorrected <- gsr(as.character(DatasetKeywordList$AIKeywords),as.character(KeywordsCorrected$AIKeywords),as.character(KeywordsCorrected$CorAIKeywordsAcronym))
