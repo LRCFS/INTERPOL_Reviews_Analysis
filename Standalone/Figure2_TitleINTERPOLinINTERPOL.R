@@ -311,7 +311,7 @@ p = ggplot(res.long, aes(col1, col2, fill = counts)) +
   geom_tile() + 
   # the darkest blue colour is too dark to see the black text
   # so make high value labels grey to be able to read them
-  geom_text(aes(label = counts), size = 2.9, fontface = 'bold', colour = ifelse(res.long$counts > 1900, 'grey', 'black')) + 
+  geom_text(aes(label = counts), size = 2.2, fontface = 'bold', colour = ifelse(res.long$counts > 3200, 'grey', 'black')) + 
   scale_fill_gradient(low = 'white', high = 'darkblue', na.value = 'white') +
   # reorder y-axis to make the desired diagonal
   scale_y_discrete(limits = types.vec[order(types.vec, decreasing  = TRUE)]) +
@@ -333,7 +333,7 @@ ggsave(
   scale = 1,
   width = 7,
   height = 5.0,
-  units = c("in", "cm", "mm"),
+  units = c("in"),
   dpi = 300,
   limitsize = TRUE
 )
