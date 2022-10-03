@@ -21,12 +21,12 @@ view_FrontPage = tabItem(tabName = "view_FrontPage",
                                tags$li("fingermark (composition)"),
                                tags$li("fingermark (detection)"),
                                tags$li("questioned documents"),
-                               tags$li("biological evidence combined with DNA.")
-                               tags$li("Firearms combined with GSR.")
-                               tags$li("Fibres and Textiles.")
+                               tags$li("biological evidence combined with DNA."),
+                               tags$li("Firearms combined with GSR."),
+                               tags$li("Fibres and Textiles."),
                                tags$li("Drugs.")
-                             )
-                             p("Please help updating content by sending early INTERPOL IFSMS reports to LRCFSdata@dundee.ac.uk")
+                             ),
+                             p("Please help updating content by sending early INTERPOL IFSMS reports to LRCFSdata@dundee.ac.uk"),
                          ),
                          box(width = 5,
                              HTML("<a href='images/Table1.png' target='_blank'><img src='images/Table1.png' width='100%'></a>")
