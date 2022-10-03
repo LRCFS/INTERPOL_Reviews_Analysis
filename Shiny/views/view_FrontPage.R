@@ -8,6 +8,7 @@ view_FrontPage = tabItem(tabName = "view_FrontPage",
                              p("Reports from the INTERPOL International Forensic Science Managers Symposium outline major areas that are of interest to forensic practitioners across the INTERPOL member countries. The information contained in the INTERPOL reports is extensive but can be challenging to process."),
                              p("The purpose of this R-Shiny application is to make this information more accessible and to allow its user to export the reference lists based on keyword searches."),
                              p("References relating to 13 evidence types retrieved from the 14th to 19th INTERPOL IFSMS reports (2004-2019) are currently included in this application, either forming a group on their own or split into specific areas creating a total of 13 reference lists:"),
+                             p("Please help updating content by sending early INTERPOL IFSMS reports to LRCFSdata@dundee.ac.uk"),
                              tags$ul(
                                tags$li("forensic geoscience"),
                                tags$li("toolmarks"),
@@ -21,12 +22,11 @@ view_FrontPage = tabItem(tabName = "view_FrontPage",
                                tags$li("fingermark (composition)"),
                                tags$li("fingermark (detection)"),
                                tags$li("questioned documents"),
-                               tags$li("biological evidence combined with DNA."),
-                               tags$li("Firearms combined with GSR."),
-                               tags$li("Fibres and Textiles."),
-                               tags$li("Drugs.")
-                             ),
-                             p("Please help updating content by sending early INTERPOL IFSMS reports to LRCFSdata@dundee.ac.uk"),
+                               tags$li("biological evidence combined with DNA"),
+                               tags$li("Firearms combined with GSR"),
+                               tags$li("Fibres and Textiles"),
+                               tags$li("Drugs")
+                             )
                          ),
                          box(width = 5,
                              HTML("<a href='images/Table1.png' target='_blank'><img src='images/Table1.png' width='100%'></a>")
