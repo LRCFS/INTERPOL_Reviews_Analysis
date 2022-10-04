@@ -92,8 +92,8 @@ removeDiacritics <- function(string) {
 #####     Select one of the following two options     #####
 #############################################################
 # this is select the groups or subgroup of evidence type. If noe are selectes, it will be combined (grouped) "Evidence" only.
- EvidenceEntries <- "SubEvidence"   #individual and splitted evidence type if applied; based on colum "SubEvidence"
-# EvidenceEntries <- "Evidence" #individual and grouped evidence type; based on colum "Evidence"
+# EvidenceEntries <- "SubEvidence"   #individual and splitted evidence type if applied; based on colum "SubEvidence"
+ EvidenceEntries <- "Evidence" #individual and grouped evidence type; based on colum "Evidence"
 
 #############################################################
 #####                 Folders and files                 #####
@@ -278,7 +278,7 @@ result <- as.matrix(result)
 CorVar <- paste0(JaccardExport,EvidenceEntries)
 
 # corrplot does not have an save funtionality as for example ggplot. Here are it is done instead:
-tiff(file.path(Results.dir,paste0(sprintf("%s.tiff",CorVar))), res=300, width = 2000, height = 1600, pointsize=9,
+png(file.path(Results.dir,paste0(sprintf("%s.png",CorVar))), res=600, width = 8000, height = 5800, pointsize=16,
     units = "px", type = "cairo")
 par(mar=c(1,1,1,520)+0.1)
 corrplot(result, method="color",
@@ -293,9 +293,10 @@ corrplot(result, method="color",
          # hide correlation coefficient on the principal diagonal
          diag=FALSE,
          #Change font size of coefficient 
-         number.cex=0.75,
+         number.cex=0.7,
          cl.lim = c(0,1)
 )
 dev.off()
 
 print("Processing complete. Please check 'Results' folder for output")
+

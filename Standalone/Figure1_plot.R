@@ -64,6 +64,6 @@ p <- ggplot(dat, aes(x=Report, fill=colour)) +
 
 show(p)
 
-ggsave("Results//Figure1.tiff", dpi= 300, width = unit(4.87, 'in'), height = unit(6, 'in'))
+ggsave("Results//Table1.png", dpi= 300, width = unit(4.87, 'in'), height = unit(6, 'in'))
 
 print("Processing complete. Please check 'Results' folder for output")
