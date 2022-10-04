@@ -4,6 +4,8 @@
 ALL_DATA = read_csv("data/All_Data_Shiny.csv")
 ALL_DATA <- as.data.frame(ALL_DATA)
 # ALL_DATA = ALL_DATA %>% distinct()
+Data_Jacard_Evidence = read_csv("data/Jaccard_evidence.csv")
+Data_Jacard_Reference = read_csv("data/Jaccard_reference.csv")
 
 # source("Code/GlobalEnvironment.R", local = TRUE);
 # source("Code/Functions/SearchAndReplace.R", local = TRUE);

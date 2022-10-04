@@ -9,16 +9,18 @@ output$model_Jaccard_graph1 = renderPlot({
 
   if (evidenceList == "Reference List"){
     #   Index Keywords only
-    dat_csvReduced <- ALL_DATA %>%
-      distinct() %>%
-      select('Reference List',TitleCorrected,Year)
-    names(dat_csvReduced)[1]<-c("EvidenceType")
+    m <- Data_Jacard_Reference
+    # dat_csvReduced <- ALL_DATA %>%
+    #   distinct() %>%
+    #   select('Reference List',TitleCorrected,Year)
+    # names(dat_csvReduced)[1]<-c("EvidenceType")
   }
   else {
-    dat_csvReduced <- ALL_DATA %>%
-      distinct() %>%
-      select('Evidence Type',TitleCorrected,Year)
-    names(dat_csvReduced)[1]<-c("EvidenceType")
+    m <- Data_Jacard_Evidence
+    # dat_csvReduced <- ALL_DATA %>%
+    #   distinct() %>%
+    #   select('Evidence Type',TitleCorrected,Year)
+    # names(dat_csvReduced)[1]<-c("EvidenceType")
   }
   
 
@@ -49,7 +51,7 @@ output$model_Jaccard_graph1 = renderPlot({
 
   corrplot(result, method="color",
            #change font size of names
-           tl.cex = 0.75,
+           tl.cex = 0.7,
            type="upper", 
            addCoef.col = "black", # Add coefficient of correlation
            tl.col="black", tl.srt=45, #Text label color and rotation
@@ -63,4 +65,4 @@ output$model_Jaccard_graph1 = renderPlot({
            cl.lim = c(0,1)
   )
 
-})
+}, width=700, height = 400)

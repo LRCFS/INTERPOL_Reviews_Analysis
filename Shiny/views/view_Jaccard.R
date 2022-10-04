@@ -18,11 +18,11 @@ view_Jaccard = tabItem(tabName = "view_Jaccard",
                                 inline = TRUE,
                               )
                           )
-                        ),
-
-                        fluidRow(
-                          box(title="Output", width=12,
-                              plotOutput("model_Jaccard_graph1")
+                       ),
+                       
+                       fluidRow(
+                        box(title="Output", width=12,
+                              plotOutput("model_Jaccard_graph1"), 
                           )
                         ),
                         
