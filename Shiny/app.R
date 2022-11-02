@@ -5,8 +5,12 @@ rm(list = ls())
 library(shiny)
 library(shinyjs)
 library(shinydashboard)
-library(shinydashboardPlus)
-
+library(shinydashboardPlus) # IMPORTANT information regarding shinydashboardPlus version
+                            # run on shinydashboardPlus 0.7.5 or earlier
+                            # to roll back to early version, run the following line in the console:
+                            # install.packages("https://cran.r-project.org/src/contrib/Archive/shinydashboardPlus/shinydashboardPlus_0.7.5.tar.gz", repo=NULL, type="source")
+                            # restart the R session
+                            # re-run app to show output display
 library(plyr)
 library(ggplot2)
 library(dplyr)
